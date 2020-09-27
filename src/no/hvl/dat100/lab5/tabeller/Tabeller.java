@@ -47,7 +47,8 @@ public class Tabeller {
 		 * 
 		 * int sum = 0; int i = 0;
 		 * 
-		 * while (i < tabell.length) { sum += tabell[i]; i++; } return sum;
+		 * while (i < tabell.length) { sum += tabell[i]; i++; } 
+		 * return sum;
 		 */
 
 		/*
