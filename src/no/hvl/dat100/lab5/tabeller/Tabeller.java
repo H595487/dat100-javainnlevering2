@@ -33,35 +33,34 @@ public class Tabeller {
 	public static int summer(int[] tabell) {
 
 		// for-løkke:
-		
-		 int sum = 0;
-		 
-		  for (int i = 0; i < tabell.length; i++) { 
-		  sum += (tabell[i]); 
-		  } 
-		  
-		 return sum;
-		 
-
-		/* While-løkke:
 
 		int sum = 0;
-		int i = 0;
 
-		while (i < tabell.length) {
-			sum += tabell[i];
-			i++;
+		for (int i = 0; i < tabell.length; i++) {
+			sum += (tabell[i]);
 		}
+
 		return sum;
-*/
+
 		/*
-		 * Utvidet for-løkke:
+		 * While-løkke:
 		 * 
-		 * int sluttSum=0; int i = 0;
+		 * int sum = 0; int i = 0;
 		 * 
-		 * for (int sum: tabell) sluttSum +=sum;
+		 * while (i < tabell.length) { sum += tabell[i]; i++; } return sum;
+		 */
+
+		/*
+		 * Utvidet for-løkke 
+		 * int i = 0; 
+		 * int sum = 0;
 		 * 
-		 * return sluttSum;
+		 * for (int tall:tabell) { 
+		 * sum += tall; 
+		 * }
+		 * 
+		 * return sum; 
+		 * }
 		 */
 
 	}
@@ -76,7 +75,7 @@ public class Tabeller {
 				funnet = true;
 			else
 				i++;
-			}
+		}
 		return funnet;
 	}
 
@@ -85,7 +84,7 @@ public class Tabeller {
 
 		int i = 0;
 		int x = -1;
-		
+
 		boolean funnet = false;
 
 		while (!funnet && i < tabell.length) {
@@ -103,37 +102,36 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-		
+
 		int nyLengde = tabell.length;
-		int [] nyTabell = new int [nyLengde];
-	    
-	    for (int i=0; i < tabell.length; i++) {
-	      nyTabell[i] = tabell[i];
-	    }
-	      int pos = nyTabell.length-1;
-	      
-	      for(int x = 0; x<=pos; x++) {
-	    	  int tmp = nyTabell[pos];
-	    	  nyTabell[pos] = nyTabell[x];
-	    			  nyTabell[x] = tmp;
-	    	  pos--;
-	      
-	    }
-	    return nyTabell;
-	    
-	  }
-	
+		int[] nyTabell = new int[nyLengde];
+
+		for (int i = 0; i < tabell.length; i++) {
+			nyTabell[i] = tabell[i];
+		}
+		int pos = nyTabell.length - 1;
+
+		for (int x = 0; x <= pos; x++) {
+			int tmp = nyTabell[pos];
+			nyTabell[pos] = nyTabell[x];
+			nyTabell[x] = tmp;
+			pos--;
+
+		}
+		return nyTabell;
+
+	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		int i=1;
+		int i = 1;
 		boolean sortert = true;
-		while (sortert && i<tabell.length) {
-			if(tabell[i-1] <=tabell[i])
+		while (sortert && i < tabell.length) {
+			if (tabell[i - 1] <= tabell[i])
 				i++;
 			else
-				sortert=false;
+				sortert = false;
 		}
 		return sortert;
 	}
@@ -142,16 +140,16 @@ public class Tabeller {
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
 		int nyLengde = tabell1.length + tabell2.length;
-		int[]nyTabell = new int[nyLengde];
-		for (int i = 0; i<tabell1.length; i++) {
+		int[] nyTabell = new int[nyLengde];
+		for (int i = 0; i < tabell1.length; i++) {
 			nyTabell[i] = tabell1[i];
 		}
-		for (int j = 0; j<tabell2.length; j++) {
-			nyTabell[tabell1.length+j] = tabell2[j];
-			
+		for (int j = 0; j < tabell2.length; j++) {
+			nyTabell[tabell1.length + j] = tabell2[j];
+
 		}
 		for (int k = 0; k < nyTabell.length; k++) {
-			
+
 		}
 		return nyTabell;
 
