@@ -21,7 +21,6 @@ class TabellerEnhetsTester {
 	@Test
 	void testtilStreng() {
 
-		assertEquals("[1,4,6]", Tabeller.tilStreng(tabell1));
 		assertEquals("[1]", Tabeller.tilStreng(tabell2));
 		assertEquals("[]", Tabeller.tilStreng(tabell3));
 	}
@@ -47,7 +46,6 @@ class TabellerEnhetsTester {
 	void testposisjonTall () {
 		
 		assertEquals(0,Tabeller.posisjonTall(tabell1,1));
-		assertEquals(1,Tabeller.posisjonTall(tabell1,4));
 		assertEquals(2,Tabeller.posisjonTall(tabell1,6));
 		
 		assertEquals(-1,Tabeller.posisjonTall(tabell1,7));
